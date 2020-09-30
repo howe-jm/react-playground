@@ -8,11 +8,7 @@ export default class Accordion extends React.Component {
   state = { activeState: null };
 
   setActiveState = (i) => {
-    if (this.state.activeState !== i) {
-      this.setState({ activeState: i });
-    } else {
-      this.setState({ activeState: null });
-    }
+    this.state.activeState !== i ? this.setState({ activeState: i }) : this.setState({ activeState: null });
   };
 
   renderLiItems(section, i, activeState) {
